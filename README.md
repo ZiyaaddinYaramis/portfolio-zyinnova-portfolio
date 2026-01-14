@@ -1,52 +1,56 @@
-⸻
+# Ziyaaddin Yaramis — Founder Portfolio
 
-Ziyaaddin Yaramis — Founder Portfolio
+Founder-driven personal portfolio website of **Ziyaaddin Yaramis**,  
+showcasing real-world projects, engineering experience, and product work built under **ZyInnova**.
 
-Founder-driven personal portfolio website of Ziyaaddin Yaramis,
-showcasing real-world projects, engineering experience, and product work built under ZyInnova.
+🌍 **Live Demo:** https://portfolio.zyinnova.com/
 
-🌍 Live: https://portfolio.zyinnova.com/
+---
 
-⸻
+## 📌 Purpose
 
-📌 Purpose
+This repository represents a **production-ready personal portfolio**, built to:
 
-This project serves as a personal founder portfolio, designed to:
-• Present professional background and experience
-• Showcase selected founder-built and personal projects
-• Act as a trust layer for ZyInnova studio work
-• Provide a clean, fast, SEO-friendly personal presence
+- Present professional background and hands-on experience
+- Showcase selected founder-built and personal projects
+- Act as a trust layer for ZyInnova studio work
+- Provide a clean, fast, and SEO-friendly personal presence
 
-This is not a template demo, but a real, production-ready personal site.
+This is **not a template demo**.  
+It is a real, actively used portfolio website.
 
-⸻
+---
 
-✨ Key Features
-• Founder-focused portfolio structure
-• Clean, minimal, dark UI (custom design system)
-• Fully responsive (mobile / tablet / desktop)
-• SEO-ready (Open Graph, Twitter Cards, JSON-LD)
-• Optimized for performance (static, lightweight)
-• Accessible navigation (keyboard + skip links)
-• CV download support (PDF)
-• Sidebar navigation with active section tracking
+## ✨ Key Features
 
-⸻
+- Founder-focused portfolio structure
+- Clean, minimal dark UI (custom design system)
+- Fully responsive (mobile / tablet / desktop)
+- SEO-ready (Open Graph, Twitter Cards, JSON-LD)
+- Optimized for performance (static & lightweight)
+- Accessible navigation (keyboard support + skip links)
+- CV download support (PDF)
+- Sidebar navigation with active section tracking
 
-🧱 Tech Stack
-• HTML5
-• CSS3 (custom design tokens & layout)
-• JavaScript (Vanilla)
-• Bootstrap 5 (grid & utilities only)
-• AOS (scroll animations)
-• Typed.js (hero typing effect)
+---
 
-No frameworks. No build tools.
-Deliberately kept simple, stable, and hosting-agnostic.
+## 🧱 Tech Stack
 
-⸻
+- **HTML5**
+- **CSS3** (custom design tokens & layout system)
+- **JavaScript (Vanilla)**
+- **Bootstrap 5** (grid & utilities only)
+- **AOS** (scroll animations)
+- **Typed.js** (hero typing effect)
 
-📁 Project Structure
+No frameworks.  
+No build tools.  
+
+Deliberately kept **simple, stable, and hosting-agnostic**.
+
+---
+
+## 📁 Project Structure
 
 /
 ├─ index.html
@@ -83,14 +87,18 @@ http://localhost:8000
 
 🌐 Deployment
 
-The site is deployed as a static website.
+This site is deployed as a static website.
 
-Production (Current)
-• Hosting: Hostinger
-• Path: public_html/portfolio
-• Domain: portfolio.zyinnova.com
+Production (current):
+	•	Hosting: Hostinger
+	•	Path: public_html/portfolio
+	•	Domain: https://portfolio.zyinnova.com
 
-Deployment flow: 1. Update files locally 2. Upload all project files to hosting 3. Replace old files completely 4. Done — no build step required
+Deployment flow:
+	1.	Update files locally
+	2.	Upload all project files to hosting
+	3.	Replace old files completely
+	4.	Done — no build step required
 
 ⸻
 

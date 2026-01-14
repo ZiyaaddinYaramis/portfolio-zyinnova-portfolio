@@ -1,9 +1,10 @@
-# Ziyaaddin Yaramis — Founder Portfolio
+# 🧑‍💻 Ziyaaddin Yaramis — Founder Portfolio
 
 Founder-driven personal portfolio website of **Ziyaaddin Yaramis**,  
 showcasing real-world projects, engineering experience, and product work built under **ZyInnova**.
 
-🌍 **Live Demo:** https://portfolio.zyinnova.com/
+🌍 **Live Demo:**  
+👉 https://portfolio.zyinnova.com/
 
 ---
 
@@ -16,8 +17,8 @@ This repository represents a **production-ready personal portfolio**, built to:
 - Act as a trust layer for ZyInnova studio work
 - Provide a clean, fast, and SEO-friendly personal presence
 
-This is **not a template demo**.  
-It is a real, actively used portfolio website.
+> ⚠️ This is **not a template demo**.  
+> It is a real, actively used portfolio website.
 
 ---
 
@@ -43,106 +44,117 @@ It is a real, actively used portfolio website.
 - **AOS** (scroll animations)
 - **Typed.js** (hero typing effect)
 
-No frameworks.  
-No build tools.  
-
-Deliberately kept **simple, stable, and hosting-agnostic**.
+> No frameworks.  
+> No build tools.
+>
+> Deliberately kept **simple, stable, and hosting-agnostic**.
 
 ---
 
 ## 📁 Project Structure
 
+````text
 /
 ├─ index.html
 ├─ robots.txt
 ├─ sitemap.xml
 ├─ .htaccess
 ├─ assets/
-│ ├─ css/
-│ │ └─ style.css
-│ ├─ js/
-│ │ └─ main.js
-│ ├─ img/
-│ │ ├─ og-cover.jpg
-│ │ └─ other images
-│ └─ cv/
-│ └─ MyResume-Ziyaaddin-Yaramis.pdf
+│  ├─ css/
+│  │  └─ style.css
+│  ├─ js/
+│  │  └─ main.js
+│  ├─ img/
+│  │  ├─ og-cover.jpg
+│  │  └─ other images
+│  └─ cv/
+│     └─ MyResume-Ziyaaddin-Yaramis.pdf
 
-⸻
+---
 
-🚀 Local Usage
+## 🚀 Local Usage
 
 You can open the site directly in a browser:
 
+```text
 index.html → double click
+````
 
 Or use a simple local server (recommended):
 
+```bash
 python -m http.server 8000
+```
 
 Then open:
-http://localhost:8000
 
-⸻
+👉 http://localhost:8000
 
-🌐 Deployment
+---
 
-This site is deployed as a static website.
+## 🌐 Deployment
 
-Production (current):
-	•	Hosting: Hostinger
-	•	Path: public_html/portfolio
-	•	Domain: https://portfolio.zyinnova.com
+This site is deployed as a **static website**.
 
-Deployment flow:
-	1.	Update files locally
-	2.	Upload all project files to hosting
-	3.	Replace old files completely
-	4.	Done — no build step required
+### Production (current)
 
-⸻
+- **Hosting:** Hostinger
+- **Path:** `public_html/portfolio`
+- **Domain:** https://portfolio.zyinnova.com
 
-🔍 SEO & Metadata
+### Deployment Flow
+
+1. Update files locally
+2. Upload all project files to hosting
+3. Replace old files completely
+4. Done — no build step required
+
+---
+
+## 🔍 SEO & Metadata
 
 Included out of the box:
-• robots.txt
-• sitemap.xml
-• Canonical URL
-• Open Graph metadata
-• Twitter Card metadata
-• JSON-LD (Person schema)
+
+- `robots.txt`
+- `sitemap.xml`
+- Canonical URL
+- Open Graph metadata
+- Twitter Card metadata
+- JSON-LD (**Person schema**)
 
 Optimized for:
-• Google Search
-• LinkedIn preview
-• Twitter/X preview
-• Clean indexing
 
-⸻
+- Google Search
+- LinkedIn preview
+- Twitter / X preview
+- Clean indexing
 
-🔗 Related Projects
-• ZyInnova Studio: https://zyinnova.com
-• GameScan Project: https://zyinnova.com/projects/gamescan
-• GitHub: https://github.com/ZiyaaddinYaramis
-• LinkedIn: https://www.linkedin.com/in/ziyaaddin-y-8768841bb/
+---
 
-⸻
+## 🔗 Related Projects
 
-📄 License
+- **ZyInnova Studio:** https://zyinnova.com
+- **GameScan Project:** https://zyinnova.com/projects/gamescan
+- **GitHub:** https://github.com/ZiyaaddinYaramis
+- **LinkedIn:**  
+  https://www.linkedin.com/in/ziyaaddin-y-8768841bb/
 
-This project is licensed under the MIT License.
+---
 
-You are free to study the code, but the content, name, and branding belong to the author.
+## 📄 License
 
-⸻
+This project is licensed under the **MIT License**.
 
-📬 Contact
+You are free to study the code,  
+but the **content, name, and branding belong to the author**.
 
-Ziyaaddin Yaramis
-Founder & Full-Stack Developer — ZyInnova
+---
 
-📧 Email: contact@zyinnova.com
-📍 Location: Kerava, Finland
+## 📬 Contact
+
+**Ziyaaddin Yaramis**  
+Founder & Full-Stack Developer — **ZyInnova**
+
+📧 Email: `contact@zyinnova.com`  
+📍 Location: Kerava, Finland  
 🕒 Timezone: Europe / Helsinki
-
-⸻

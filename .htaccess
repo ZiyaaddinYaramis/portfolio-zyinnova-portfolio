@@ -1,0 +1,27 @@
+# ==================================================
+# ZyInnova Portfolio - Minimal & Safe .htaccess
+# ==================================================
+
+# Ensure UTF-8
+AddDefaultCharset UTF-8
+
+# Disable directory listing
+Options -Indexes
+
+# Security headers (safe & lightweight)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Cache static assets (performance boost)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Multi-language Todo App concept cover</title>
+  <desc id="desc">A dark blue task dashboard with English and Finnish language labels.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061427"/>
+      <stop offset="1" stop-color="#123f65"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#148af9"/>
+      <stop offset="1" stop-color="#62d7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="25" flood-color="#000" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <circle cx="1100" cy="115" r="230" fill="#148af9" opacity=".12"/>
+  <circle cx="120" cy="660" r="260" fill="#62d7ff" opacity=".08"/>
+  <text x="90" y="115" fill="#eaf2ff" font-family="Arial, sans-serif" font-size="58" font-weight="700">Todo App</text>
+  <text x="92" y="165" fill="#b6c6da" font-family="Arial, sans-serif" font-size="24">Flutter • Firebase • English / Finnish</text>
+  <g filter="url(#shadow)">
+    <rect x="120" y="220" width="1040" height="390" rx="34" fill="#0b2138" stroke="#4faeff" stroke-opacity=".45"/>
+    <rect x="160" y="258" width="280" height="314" rx="24" fill="#102f4d"/>
+    <text x="198" y="312" fill="#eaf2ff" font-family="Arial, sans-serif" font-size="25" font-weight="700">Today</text>
+    <text x="198" y="355" fill="#9db4ca" font-family="Arial, sans-serif" font-size="18">Tänään</text>
+    <rect x="198" y="405" width="150" height="14" rx="7" fill="#148af9"/>
+    <rect x="198" y="443" width="198" height="10" rx="5" fill="#66829d"/>
+    <rect x="198" y="477" width="175" height="10" rx="5" fill="#66829d"/>
+    <circle cx="380" cy="530" r="23" fill="url(#accent)"/>
+    <path d="M370 530l8 8 15-18" fill="none" stroke="#061427" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(485 270)">
+      <rect width="625" height="74" rx="18" fill="#102f4d"/>
+      <circle cx="38" cy="37" r="15" fill="none" stroke="#62d7ff" stroke-width="4"/>
+      <text x="72" y="33" fill="#eaf2ff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Prepare project brief</text>
+      <text x="72" y="57" fill="#9db4ca" font-family="Arial, sans-serif" font-size="14">Due today • High priority</text>
+      <rect y="98" width="625" height="74" rx="18" fill="#102f4d"/>
+      <circle cx="38" cy="135" r="15" fill="#148af9"/>
+      <path d="M29 135l7 7 13-16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="72" y="131" fill="#eaf2ff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Review Finnish translations</text>
+      <text x="72" y="155" fill="#9db4ca" font-family="Arial, sans-serif" font-size="14">Completed • Valmis</text>
+      <rect y="196" width="625" height="74" rx="18" fill="#102f4d"/>
+      <circle cx="38" cy="233" r="15" fill="none" stroke="#62d7ff" stroke-width="4"/>
+      <text x="72" y="229" fill="#eaf2ff" font-family="Arial, sans-serif" font-size="20" font-weight="700">Plan the next iteration</text>
+      <text x="72" y="253" fill="#9db4ca" font-family="Arial, sans-serif" font-size="14">Reminder enabled</text>
+    </g>
+  </g>
+</svg>

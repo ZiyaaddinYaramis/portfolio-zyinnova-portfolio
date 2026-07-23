@@ -7,62 +7,74 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
 
-    <title>Ziyaaddin Yaramis | Founder & Full-Stack Developer</title>
+    <title>Ziyaaddin Yaramis | Software Developer • Founder of ZyInnova</title>
     <meta
       name="description"
-      content="Founder-driven personal portfolio of Ziyaaddin Yaramis. Full-stack developer building real products under ZyInnova."
+      content="Portfolio of Ziyaaddin Yaramis, a software developer and founder of ZyInnova building practical web and mobile product work."
     />
     <meta name="robots" content="index,follow" />
+    <meta name="author" content="Ziyaaddin Yaramis" />
     <meta name="theme-color" content="#061427" />
 
     <link rel="canonical" href="https://portfolio.zyinnova.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Ziyaaddin Yaramis Portfolio" />
     <meta
       property="og:title"
-      content="Ziyaaddin Yaramis | Founder & Full-Stack Developer"
+      content="Ziyaaddin Yaramis | Software Developer • Founder of ZyInnova"
     />
     <meta
       property="og:description"
-      content="Founder-driven portfolio. Full-stack developer building production-ready web & mobile products under ZyInnova."
+      content="Software developer and founder of ZyInnova building practical web and mobile product work."
     />
     <meta property="og:url" content="https://portfolio.zyinnova.com/" />
     <meta
       property="og:image"
-      content="https://portfolio.zyinnova.com/assets/img/og-cover.jpg"
+      content="https://portfolio.zyinnova.com/assets/img/og-cover-2026.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Ziyaaddin Yaramis — Founder & Full-Stack Developer portfolio cover"
+      content="Ziyaaddin Yaramis — Software Developer and Founder of ZyInnova"
     />
+    <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Ziyaaddin Yaramis | Founder & Full-Stack Developer"
+      content="Ziyaaddin Yaramis | Software Developer • Founder of ZyInnova"
     />
     <meta
       name="twitter:description"
-      content="Production-ready web & mobile products. React + Flutter. Built under ZyInnova."
+      content="Software developer and founder of ZyInnova building practical web and mobile product work."
     />
     <meta
       name="twitter:image"
-      content="https://portfolio.zyinnova.com/assets/img/og-cover.jpg"
+      content="https://portfolio.zyinnova.com/assets/img/og-cover-2026.jpg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Ziyaaddin Yaramis — Software Developer and Founder of ZyInnova"
     />
 
     <!-- Favicons -->
-    <link href="assets/img/faviconZy.png" rel="icon" />
-
-    <!-- Fonts (perf) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:400,600,700|Poppins:400,500,600"
-      rel="stylesheet"
+      href="assets/img/faviconZy.png"
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="preload"
+      href="assets/img/background-portfolio.webp"
+      as="image"
+      type="image/webp"
+      fetchpriority="high"
     />
 
     <!-- Vendor CSS -->
@@ -81,7 +93,7 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <!-- Main CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/style.css?v=20260723e" rel="stylesheet" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -89,19 +101,23 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Ziyaaddin Yaramis",
-        "jobTitle": "Founder & Full-Stack Developer",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Kerava",
-          "addressCountry": "FI"
-        },
+        "jobTitle": "Full-Stack Software Developer | Founder, ZyInnova",
         "email": "mailto:contact@zyinnova.com",
         "url": "https://portfolio.zyinnova.com/",
         "sameAs": [
           "https://github.com/ZiyaaddinYaramis",
           "https://www.linkedin.com/in/ziyaaddin-y-8768841bb/",
-          "https://zyinnova.com"
-        ]
+          "https://zyinnova.com/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "ZyInnova",
+          "url": "https://zyinnova.com/",
+          "sameAs": [
+            "https://github.com/zyinnova",
+            "https://www.linkedin.com/company/zyinnova/"
+          ]
+        }
       }
     </script>
   </head>
@@ -110,10 +126,15 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- Mobile nav toggle -->
-    <i
-      class="bi bi-list mobile-nav-toggle d-lg-none"
-      aria-label="Toggle menu"
-    ></i>
+    <button
+      type="button"
+      class="mobile-nav-toggle d-lg-none"
+      aria-label="Open navigation"
+      aria-controls="header"
+      aria-expanded="false"
+    >
+      <i class="bi bi-list" aria-hidden="true"></i>
+    </button>
 
     <!-- Header -->
     <header id="header" class="d-flex flex-column justify-content-center">
@@ -146,11 +167,22 @@
           </li>
           <li>
             <a
-              href="assets/cv/MyResume-Ziyaaddin-Yaramis.pdf"
+              href="assets/cv/Ziyaaddin_Yaramis_CV_EN.pdf"
               class="nav-link"
               download
+              aria-label="Download English CV as PDF"
             >
-              <i class="bx bx-download"></i><span>CV</span>
+              <i class="bx bx-download"></i><span>CV (EN)</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="assets/cv/Ziyaaddin_Yaramis_CV_FI.pdf"
+              class="nav-link"
+              download
+              aria-label="Lataa suomenkielinen CV PDF-tiedostona"
+            >
+              <i class="bx bx-download"></i><span>CV (FI)</span>
             </a>
           </li>
         </ul>
@@ -161,11 +193,14 @@
     <section id="hero" class="d-flex flex-column justify-content-center">
       <div class="container" data-aos="zoom-in">
         <h1>Ziyaaddin Yaramis</h1>
-        <p>
-          Founder &nbsp;•&nbsp;
+        <p class="hero-role">
+          Software Developer &nbsp;•&nbsp; Founder of ZyInnova
+        </p>
+        <p class="hero-focus">
+          Focus:
           <span
             class="typed"
-            data-typed-items="Full-Stack Developer, Product Builder, Startup Founder"
+            data-typed-items="Flutter &amp; Firebase, Web &amp; Mobile Development, ZyInnova Products"
           ></span>
         </p>
 
@@ -174,9 +209,18 @@
             href="https://github.com/ZiyaaddinYaramis"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
+            aria-label="Ziyaaddin Yaramis on GitHub"
           >
             <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+
+          <a
+            href="https://github.com/zyinnova"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ZyInnova on GitHub"
+          >
+            <i class="bx bxs-business" aria-hidden="true"></i>
           </a>
 
           <a
@@ -186,6 +230,15 @@
             aria-label="LinkedIn"
           >
             <i class="bx bxl-linkedin" aria-hidden="true"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/zyinnova/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="ZyInnova on LinkedIn"
+          >
+            <i class="bx bxs-business" aria-hidden="true"></i>
           </a>
 
           <a
@@ -207,28 +260,33 @@
           <div class="section-title">
             <h2>About</h2>
             <p>
-              I am a founder-driven full-stack developer focused on building
-              real, scalable digital products. I design and develop systems that
-              move from concept to production under my own studio, ZyInnova.
+              I am a software developer and founder of ZyInnova. I build
+              practical web and mobile product work with an emphasis on clear
+              scope, maintainable implementation, and evidence-based
+              communication.
             </p>
           </div>
 
           <div class="row align-items-center">
             <div class="col-lg-4">
               <img
-                src="assets/img/profil-zy.jpg"
+                src="assets/img/profile-zy.webp"
                 class="img-fluid rounded-3"
+                width="1024"
+                height="1019"
                 alt="Ziyaaddin Yaramis"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0">
-              <h3>Founder • Full-Stack Developer • Product Builder</h3>
+              <h3>Full-Stack Software Developer • Founder, ZyInnova</h3>
               <p>
-                My work blends engineering, product thinking, and long-term
-                ownership. I focus on clean architecture, performance, and
-                user-centric design. ZyInnova represents my vision of building
-                meaningful and sustainable digital products.
+                ZyInnova is the umbrella under which I define and develop
+                founder-led web and mobile projects. My hands-on project
+                experience includes Flutter, Firebase Authentication, Cloud
+                Firestore, REST/HTTP integrations, and HTML/CSS/JavaScript.
+                LemmikkiLife is the current priority product in development.
               </p>
             </div>
           </div>
@@ -241,9 +299,9 @@
           <div class="section-title">
             <h2>Resume</h2>
             <p>
-              Founder-driven full-stack developer building real products under
-              ZyInnova. Focused on scalable architecture, performance, and
-              clean, maintainable systems.
+              The same verified professional profile used in the English and
+              Finnish CVs, with LemmikkiLife presented as the current priority
+              product under ZyInnova.
             </p>
           </div>
 
@@ -255,14 +313,13 @@
                 <h4>Ziyaaddin Yaramis</h4>
                 <p>
                   <em>
-                    Founder & Full-Stack Developer (Web + Mobile). I build
-                    end-to-end products: from UX and system design to deployment
-                    and iteration. Strong focus on reliability, clarity, and
-                    long-term maintainability.
+                    Full-Stack Software Developer and founder of ZyInnova,
+                    building practical web and mobile product work with clear
+                    scope, maintainable implementation, and evidence-based
+                    communication.
                   </em>
                 </p>
                 <ul>
-                  <li>Kerava, Finland</li>
                   <li>
                     <a href="mailto:contact@zyinnova.com"
                       >contact@zyinnova.com</a
@@ -295,27 +352,25 @@
 
               <h3 class="resume-title">Core Skills</h3>
               <div class="resume-item">
-                <h4>Engineering</h4>
+                <h4>Verified project skills</h4>
                 <ul>
                   <li>
-                    <strong>Frontend:</strong> React, HTML/CSS, modern UI
-                    patterns, accessibility basics
+                    <strong>Mobile:</strong> Flutter, Dart
                   </li>
                   <li>
-                    <strong>Mobile:</strong> Flutter (multi-platform), state
-                    management patterns
+                    <strong>Web:</strong> HTML, CSS, JavaScript, Bootstrap
+                    utilities
                   </li>
                   <li>
-                    <strong>Backend:</strong> Java (Spring Boot), REST APIs,
-                    authentication basics
+                    <strong>Backend and data:</strong> Firebase Authentication,
+                    Cloud Firestore
                   </li>
                   <li>
-                    <strong>Data:</strong> SQL fundamentals, Firebase/Firestore
-                    patterns
+                    <strong>Integration:</strong> REST/HTTP APIs, TMDB API
                   </li>
                   <li>
-                    <strong>Workflow:</strong> Git/GitHub, clean repo structure,
-                    documentation, iteration
+                    <strong>Workflow:</strong> Git, GitHub, documentation,
+                    iterative delivery
                   </li>
                 </ul>
               </div>
@@ -323,179 +378,13 @@
               <h3 class="resume-title">Education</h3>
               <div class="resume-item">
                 <h4>
-                  Information and Communication Technology (Software
-                  Development)
+                  Vocational Qualification in Information and Communication
+                  Technology
                 </h4>
-                <h5>2023 – Present</h5>
-                <p><em>KEUDA Vocational College — Finland</em></p>
+                <h5>Graduated 2025</h5>
+                <p><em>Keuda, Finland</em></p>
                 <ul>
-                  <li>
-                    Software development fundamentals, project work, modern
-                    tooling
-                  </li>
-                  <li>Web and application development practices</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- RIGHT COLUMN -->
-            <div class="col-lg-6">
-              <h3 class="resume-title">Experience</h3>
-
-              <div class="resume-item">
-                <h4>Founder & Lead Developer — ZyInnova</h4>
-                <h5>2024 – Present</h5>
-                <p><em>Kerava, Finland (Independent Studio)</em></p>
-                <ul>
-                  <li>
-                    Build and evolve a founder-led product studio delivering web
-                    and mobile solutions.
-                  </li>
-                  <li>
-                    Own the full product lifecycle: discovery → design →
-                    implementation → deployment → iteration.
-                  </li>
-                  <li>
-                    Define project architecture, code standards, and
-                    documentation for long-term maintainability.
-                  </li>
-                  <li>
-                    Current focus: building product-ready experiences and a
-                    scalable studio foundation under
-                    <a
-                      href="https://zyinnova.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >zyinnova.com</a
-                    >.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="resume-item">
-                <h4>Flutter Developer Intern</h4>
-                <h5>Oct 2024 – Dec 2024</h5>
-                <p><em>Roseance Oy — Remote</em></p>
-                <ul>
-                  <li>
-                    Developed cross-platform mobile applications using Flutter
-                    and Firebase (Authentication, Firestore).
-                  </li>
-                  <li>
-                    Implemented UI components and contributed to application
-                    logic.
-                  </li>
-                  <li>
-                    Conducted market research for beauty salons in the U.S. and
-                    prepared outreach-ready lists.
-                  </li>
-                  <li>Collaborated remotely using Slack and GitHub.</li>
-                  <li>
-                    Performed basic manual testing and debugging during
-                    development.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="resume-item">
-                <h4>Web Developer Intern — Sisustusklinikka.fi</h4>
-                <h5>Feb 2024 – May 2024</h5>
-                <p>
-                  <em>
-                    Kerava, Finland ·
-                    <a
-                      href="https://www.sisustusklinikka.fi/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Sisustusklinikka.fi</a
-                    >
-                  </em>
-                </p>
-                <ul>
-                  <li>
-                    Designed and developed a business website using WordPress.
-                  </li>
-                  <li>
-                    Customized themes, created pages, and integrated essential
-                    plugins.
-                  </li>
-                  <li>
-                    Gained hands-on experience in client communication, delivery
-                    timelines, and frontend structure.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="resume-item">
-                <h4>Java Mentor</h4>
-                <h5>2022</h5>
-                <p><em>Wisequarter — Remote</em></p>
-                <ul>
-                  <li>
-                    Mentored students in Java programming during a 75-hour
-                    intensive bootcamp.
-                  </li>
-                  <li>
-                    Supported learners with core Java, OOP, and real-world
-                    projects.
-                  </li>
-                </ul>
-              </div>
-
-              <div class="resume-item">
-                <h4>Full Stack Java Developer Trainee</h4>
-                <h5>2021</h5>
-                <p><em>Techproed — Online</em></p>
-                <ul>
-                  <li>
-                    Completed a comprehensive course on Full Stack Java
-                    Development.
-                  </li>
-                  <li>
-                    Gained hands-on experience with Spring, Hibernate, RESTful
-                    APIs, and frontend tools.
-                  </li>
-                  <li>Built and deployed sample full stack applications.</li>
-                </ul>
-              </div>
-
-              <div class="resume-item">
-                <h4>Police Officer</h4>
-                <h5>2006 – 2016</h5>
-                <p><em>Turkish National Police</em></p>
-                <ul>
-                  <li>
-                    Teamwork, responsibility, crisis management, structured
-                    reporting.
-                  </li>
-                </ul>
-              </div>
-
-              <h3 class="resume-title">Selected Projects (Founder-built)</h3>
-              <div class="resume-item">
-                <h4>
-                  GameScan — Multi-platform game discovery & compatibility
-                </h4>
-                <h5>In Progress</h5>
-                <ul>
-                  <li>
-                    Product direction, architecture planning, and cross-platform
-                    development.
-                  </li>
-                  <li>
-                    Goal: help users understand game requirements and discover
-                    what fits their system.
-                  </li>
-                  <li>
-                    Project page:
-                    <a
-                      href="https://zyinnova.com/projects/gamescan"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      zyinnova.com/projects/gamescan
-                    </a>
-                  </li>
+                  <li><strong>Qualification title:</strong> Software Developer</li>
                 </ul>
               </div>
 
@@ -504,8 +393,168 @@
                 <h4>Communication</h4>
                 <ul>
                   <li><strong>Turkish:</strong> Native</li>
-                  <li><strong>English:</strong> Professional working level</li>
-                  <li><strong>Finnish:</strong> Developing</li>
+                  <li><strong>English:</strong> B2</li>
+                  <li><strong>Finnish:</strong> B2</li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">Download CV</h3>
+              <div class="resume-item">
+                <p>Choose the language that best fits your application.</p>
+                <div class="cv-downloads">
+                  <a
+                    class="btn-primary-pill"
+                    href="assets/cv/Ziyaaddin_Yaramis_CV_EN.pdf"
+                    download
+                  >
+                    English CV <i class="bx bx-download"></i>
+                  </a>
+                  <a
+                    class="btn-ghost-pill"
+                    href="assets/cv/Ziyaaddin_Yaramis_CV_FI.pdf"
+                    download
+                  >
+                    Finnish CV <i class="bx bx-download"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="col-lg-6">
+              <h3 class="resume-title">Experience</h3>
+
+              <div class="resume-item">
+                <h4>Founder &amp; Software Developer — ZyInnova</h4>
+                <h5>Current role</h5>
+                <ul>
+                  <li>
+                    Define and develop founder-led web and mobile product work
+                    under the ZyInnova umbrella, from product scope through
+                    implementation and iteration.
+                  </li>
+                  <li>
+                    Maintain the public founder portfolio and keep project
+                    communication aligned with current development status.
+                    Current private product work includes LemmikkiLife and
+                    GameScan.
+                  </li>
+                  <li>
+                    Website:
+                    <a
+                      href="https://zyinnova.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >zyinnova.com</a
+                    >
+                    &nbsp;•&nbsp; GitHub:
+                    <a
+                      href="https://github.com/zyinnova"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >@zyinnova</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <h3 class="resume-title">Earlier Experience</h3>
+              <div class="resume-item">
+                <h4>Flutter Developer Intern — Roseance Oy</h4>
+                <h5>Oct 2024–Dec 2024</h5>
+                <p>
+                  Completed a documented fixed-term internship in a Flutter
+                  developer role.
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Web Developer Intern — Sisustusklinikka.fi</h4>
+                <h5>Feb 2024–May 2024</h5>
+                <p>
+                  Completed a documented fixed-term internship in a web
+                  developer role.
+                </p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Java Mentor — Wise Quarter</h4>
+                <h5>2022</h5>
+                <p>Served as a Java mentor in a documented training program.</p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Police Officer — Turkish National Police</h4>
+                <h5>2006–2016</h5>
+                <p>Served as a police officer in the Turkish National Police.</p>
+              </div>
+
+              <h3 class="resume-title">Additional Training</h3>
+              <div class="resume-item">
+                <h4>Full-Stack Java Developer Training</h4>
+                <h5>TechPro Education • 2021</h5>
+              </div>
+
+              <h3 class="resume-title">Selected Projects</h3>
+              <div class="resume-item">
+                <h4>LemmikkiLife</h4>
+                <h5>In development</h5>
+                <ul>
+                  <li>
+                    Developing a private ZyInnova pet-care product intended to
+                    bring care tracking, vaccination and medication reminders,
+                    products, and subscription boxes into one application.
+                  </li>
+                  <li>
+                    <a
+                      href="https://zyinnova.com/projects/lemmikkilife"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >LemmikkiLife project page</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Multi-language Todo App</h4>
+                <h5>Public prototype</h5>
+                <ul>
+                  <li>
+                    Flutter application with English and Finnish localization,
+                    Firebase Authentication, password reset, user-specific Cloud
+                    Firestore tasks, priorities, due dates, filtering, and local
+                    notifications.
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/ZiyaaddinYaramis/github_io_todo_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Todo App repository</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>Founder Portfolio</h4>
+                <h5>Live</h5>
+                <ul>
+                  <li>
+                    Built and published with HTML, CSS, JavaScript, Bootstrap
+                    utilities, AOS, and Typed.js.
+                  </li>
+                  <li>
+                    <a href="https://portfolio.zyinnova.com/">Live site</a>
+                    &nbsp;•&nbsp;
+                    <a
+                      href="https://github.com/ZiyaaddinYaramis/portfolio-zyinnova-portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Repository</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -519,20 +568,79 @@
           <div class="section-title">
             <h2>Projects</h2>
             <p>
-              Founder-built products and systems aligned with ZyInnova. Each
-              project is designed with real-world usability, maintainability,
-              and long-term product thinking.
+              Verified product and project work. Status labels distinguish
+              private work in development, public prototypes, and live work.
             </p>
           </div>
 
           <div class="projects-block">
-            <h3 class="projects-block-title">ZyInnova Projects</h3>
+            <h3 class="projects-block-title">Selected Work</h3>
 
             <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-6">
                 <article class="project-card">
+                  <figure class="project-visual">
+                    <img
+                      src="assets/img/projects/lemmikkilife-cover.webp"
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                      alt="LemmikkiLife official concept cover with a pet-care mobile interface, a dog, a cat, and a subscription box"
+                    />
+                    <figcaption>Official ZyInnova concept cover</figcaption>
+                  </figure>
+
                   <div class="project-head">
-                    <div class="project-badge badge-progress">In Progress</div>
+                    <div class="project-badge badge-progress">
+                      In Development
+                    </div>
+                    <div class="project-icon">
+                      <i class="bx bx-heart"></i>
+                    </div>
+                  </div>
+
+                  <h4 class="project-title">LemmikkiLife</h4>
+                  <p class="project-desc">
+                    A private ZyInnova pet-care product intended to bring care
+                    tracking, vaccination and medication reminders, products,
+                    and subscription boxes into one application.
+                  </p>
+
+                  <div class="project-tags">
+                    <span>ZyInnova</span>
+                    <span>Private</span>
+                    <span>Pet care</span>
+                  </div>
+
+                  <div class="project-links">
+                    <a
+                      href="https://zyinnova.com/projects/lemmikkilife"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Project Page <i class="bx bx-link-external"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-lg-6">
+                <article class="project-card">
+                  <figure class="project-visual">
+                    <img
+                      src="assets/img/projects/gamescan-cover.webp"
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                      alt="GameScan official concept cover with a game comparison interface and gaming devices"
+                    />
+                    <figcaption>Official ZyInnova concept cover</figcaption>
+                  </figure>
+
+                  <div class="project-head">
+                    <div class="project-badge badge-progress">
+                      Private / In Development
+                    </div>
                     <div class="project-icon">
                       <i class="bx bx-joystick"></i>
                     </div>
@@ -540,15 +648,15 @@
 
                   <h4 class="project-title">GameScan</h4>
                   <p class="project-desc">
-                    Multi-platform game discovery & compatibility platform.
-                    Helps users understand requirements, compare platforms, and
-                    find games that match their device.
+                    A private ZyInnova product concept for finding and
+                    comparing games by device requirements, price, platform,
+                    and VR support. Technical implementation remains private.
                   </p>
 
                   <div class="project-tags">
-                    <span>Flutter</span>
-                    <span>Firebase</span>
-                    <span>Product</span>
+                    <span>ZyInnova</span>
+                    <span>Private</span>
+                    <span>Game discovery</span>
                   </div>
 
                   <div class="project-links">
@@ -563,80 +671,25 @@
                 </article>
               </div>
 
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-6">
                 <article class="project-card">
+                  <figure class="project-visual">
+                    <img
+                      src="assets/img/projects/todo-app-cover.svg"
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                      alt="Illustration of the Todo App showing English and Finnish tasks in a dark blue dashboard"
+                    />
+                    <figcaption>
+                      Illustration based on verified feature scope
+                    </figcaption>
+                  </figure>
+
                   <div class="project-head">
-                    <div class="project-badge badge-concept">Concept</div>
-                    <div class="project-icon"><i class="bx bx-bulb"></i></div>
-                  </div>
-
-                  <h4 class="project-title">Next ZyInnova Product</h4>
-                  <p class="project-desc">
-                    A studio-ready product slot reserved for the next launch.
-                    This card will be replaced with a real project once the
-                    public page is ready.
-                  </p>
-
-                  <div class="project-tags">
-                    <span>Strategy</span>
-                    <span>Design</span>
-                    <span>Build</span>
-                  </div>
-
-                  <div class="project-links">
-                    <a
-                      href="https://zyinnova.com/projects"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ZyInnova Projects <i class="bx bx-link-external"></i>
-                    </a>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-lg-4 col-md-6">
-                <article class="project-card">
-                  <div class="project-head">
-                    <div class="project-badge badge-concept">Concept</div>
-                    <div class="project-icon"><i class="bx bx-layer"></i></div>
-                  </div>
-
-                  <h4 class="project-title">Studio Template System</h4>
-                  <p class="project-desc">
-                    Reusable patterns for landing pages, design tokens, SEO
-                    structure, and production-ready deployment. Built to
-                    accelerate ZyInnova product launches.
-                  </p>
-
-                  <div class="project-tags">
-                    <span>React</span>
-                    <span>Vite</span>
-                    <span>SEO</span>
-                  </div>
-
-                  <div class="project-links">
-                    <a
-                      href="https://zyinnova.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      ZyInnova <i class="bx bx-link-external"></i>
-                    </a>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects-block mt-5">
-            <h3 class="projects-block-title">Selected Personal Projects</h3>
-
-            <div class="row g-4">
-              <div class="col-lg-4 col-md-6">
-                <article class="project-card">
-                  <div class="project-head">
-                    <div class="project-badge badge-live">Live</div>
+                    <div class="project-badge badge-progress">
+                      Public Prototype
+                    </div>
                     <div class="project-icon">
                       <i class="bx bx-check-square"></i>
                     </div>
@@ -644,24 +697,70 @@
 
                   <h4 class="project-title">Multi-language Todo App</h4>
                   <p class="project-desc">
-                    A clean Flutter app with localization and authentication
-                    patterns. Built as a scalable foundation for future product
-                    work.
+                    Flutter application with English and Finnish localization,
+                    Firebase Authentication, password reset, user-specific
+                    Cloud Firestore tasks, priorities, due dates, filtering,
+                    and local notifications.
                   </p>
 
                   <div class="project-tags">
                     <span>Flutter</span>
-                    <span>i18n</span>
                     <span>Firebase</span>
+                    <span>EN / FI</span>
                   </div>
 
                   <div class="project-links">
                     <a
-                      href="https://github.com/ZiyaaddinYaramis"
+                      href="https://github.com/ZiyaaddinYaramis/github_io_todo_app"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      GitHub <i class="bx bx-link-external"></i>
+                      Repository <i class="bx bx-link-external"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-lg-6">
+                <article class="project-card">
+                  <figure class="project-visual">
+                    <img
+                      src="assets/img/projects/founder-portfolio-cover.svg"
+                      width="1280"
+                      height="720"
+                      loading="lazy"
+                      alt="Illustration of the Founder Portfolio open in a browser window"
+                    />
+                    <figcaption>Portfolio interface illustration</figcaption>
+                  </figure>
+
+                  <div class="project-head">
+                    <div class="project-badge badge-live">Live</div>
+                    <div class="project-icon"><i class="bx bx-globe"></i></div>
+                  </div>
+
+                  <h4 class="project-title">Founder Portfolio</h4>
+                  <p class="project-desc">
+                    The canonical personal portfolio, built with HTML, CSS, and
+                    JavaScript using Bootstrap utilities, AOS, and Typed.js.
+                  </p>
+
+                  <div class="project-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                  </div>
+
+                  <div class="project-links">
+                    <a href="https://portfolio.zyinnova.com/">
+                      Live Site <i class="bx bx-link-external"></i>
+                    </a>
+                    <a
+                      href="https://github.com/ZiyaaddinYaramis/portfolio-zyinnova-portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Repository <i class="bx bx-link-external"></i>
                     </a>
                   </div>
                 </article>
@@ -677,8 +776,8 @@
           <div class="section-title">
             <h2>Contact</h2>
             <p>
-              For professional inquiries, collaborations, or product work. I
-              usually respond within 24–48 hours.
+              Use the ZyInnova contact address for professional inquiries,
+              collaborations, or product work.
             </p>
           </div>
 
@@ -706,7 +805,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    LinkedIn <i class="bx bx-link-external"></i>
+                    Personal LinkedIn <i class="bx bx-link-external"></i>
                   </a>
                 </div>
 
@@ -718,14 +817,6 @@
                       <a href="mailto:contact@zyinnova.com"
                         >contact@zyinnova.com</a
                       >
-                    </div>
-                  </div>
-
-                  <div class="meta-item">
-                    <i class="bx bx-map"></i>
-                    <div>
-                      <div class="meta-label">Location</div>
-                      <div class="meta-value">Kerava, Finland</div>
                     </div>
                   </div>
 
@@ -750,7 +841,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    ZyInnova Studio <span>zyinnova.com</span>
+                    ZyInnova <span>zyinnova.com</span>
                     <i class="bx bx-link-external"></i>
                   </a>
                   <a
@@ -759,6 +850,30 @@
                     rel="noopener noreferrer"
                   >
                     GitHub <span>@ZiyaaddinYaramis</span>
+                    <i class="bx bx-link-external"></i>
+                  </a>
+                  <a
+                    href="https://github.com/zyinnova"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub <span>@zyinnova organization</span>
+                    <i class="bx bx-link-external"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/ziyaaddin-y-8768841bb/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn <span>Personal profile</span>
+                    <i class="bx bx-link-external"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/zyinnova/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    ZyInnova LinkedIn <span>Company page</span>
                     <i class="bx bx-link-external"></i>
                   </a>
                   <a href="#portfolio">
@@ -771,8 +886,8 @@
                   <div class="note-badge">Preferred</div>
                   <p>
                     Email is the best channel. If the request is about ZyInnova,
-                    mention the product name (e.g., “GameScan”) so I can route
-                    it correctly.
+                    mention the product name (for example, “LemmikkiLife”) so I
+                    can route it correctly.
                   </p>
                 </div>
               </div>
@@ -798,11 +913,10 @@
           <div class="footer-brand">
             <div class="footer-name">Ziyaaddin Yaramis</div>
             <div class="footer-role">
-              Founder & Full-Stack Developer — ZyInnova
+              Full-Stack Software Developer | Founder, ZyInnova
             </div>
             <div class="footer-note">
-              Building real, maintainable products with strong ownership
-              mindset.
+              Building practical web and mobile product work under ZyInnova.
             </div>
           </div>
 
@@ -818,17 +932,22 @@
               >ZyInnova <i class="bx bx-link-external"></i
             ></a>
             <a
-              href="assets/cv/MyResume-Ziyaaddin-Yaramis.pdf"
+              href="assets/cv/Ziyaaddin_Yaramis_CV_EN.pdf"
               download
               class="footer-cv"
-              >Download CV <i class="bx bx-download"></i
+              >CV (EN) <i class="bx bx-download"></i
+            ></a>
+            <a
+              href="assets/cv/Ziyaaddin_Yaramis_CV_FI.pdf"
+              download
+              class="footer-cv"
+              >CV (FI) <i class="bx bx-download"></i
             ></a>
           </div>
         </div>
 
         <div class="footer-bottom">
           <div class="footer-mini">
-            <span class="footer-pill">Kerava, Finland</span>
             <span class="footer-pill">Europe/Helsinki</span>
             <a class="footer-pill" href="mailto:contact@zyinnova.com"
               >contact@zyinnova.com</a
@@ -843,9 +962,14 @@
     </footer>
 
     <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="assets/js/main.js"></script>
+    <script
+      src="https://unpkg.com/aos@2.3.4/dist/aos.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/main.js?v=20260723f"></script>
   </body>
 </html>

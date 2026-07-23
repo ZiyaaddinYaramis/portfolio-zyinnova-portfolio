@@ -22,6 +22,10 @@
     el.addEventListener("scroll", listener);
   };
 
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
   /* =========================
      Navbar active state (Safari-safe + footer-safe)
   ========================= */
@@ -30,7 +34,10 @@
   const setActiveLinkById = (id) => {
     navbarlinks.forEach((link) => {
       const hash = link.hash || link.getAttribute("href");
-      link.classList.toggle("active", hash === `#${id}`);
+      const isActive = hash === `#${id}`;
+      link.classList.toggle("active", isActive);
+      if (isActive) link.setAttribute("aria-current", "page");
+      else link.removeAttribute("aria-current");
     });
   };
 
@@ -82,11 +89,56 @@
      Smooth scroll
   ========================= */
   const scrollto = (el) => {
-    const elementPos = select(el).offsetTop;
+    const target = select(el);
+    if (!target) return;
+    const elementPos = target.offsetTop;
     window.scrollTo({
       top: elementPos,
-      behavior: "smooth",
+      behavior: reduceMotion ? "auto" : "smooth",
     });
+  };
+
+  const mobileToggle = select(".mobile-nav-toggle");
+  const mobileToggleIcon = mobileToggle
+    ? mobileToggle.querySelector("i")
+    : null;
+  const header = select("#header");
+  const mobileMedia = window.matchMedia("(max-width: 991px)");
+
+  const setMobileNavigation = (open, restoreFocus = false) => {
+    if (!mobileToggle || !header) return;
+
+    document.body.classList.toggle("mobile-nav-active", open);
+    mobileToggle.setAttribute("aria-expanded", String(open));
+    mobileToggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation" : "Open navigation"
+    );
+    mobileToggleIcon?.classList.toggle("bi-list", !open);
+    mobileToggleIcon?.classList.toggle("bi-x", open);
+
+    if (mobileMedia.matches) {
+      header.toggleAttribute("inert", !open);
+      header.setAttribute("aria-hidden", String(!open));
+    } else {
+      header.removeAttribute("inert");
+      header.removeAttribute("aria-hidden");
+    }
+
+    if (open) {
+      navbarlinks[0]?.focus();
+    } else if (restoreFocus) {
+      mobileToggle.focus();
+    }
+  };
+
+  const syncMobileNavigation = () => {
+    if (!mobileMedia.matches) {
+      setMobileNavigation(false);
+      return;
+    }
+    const isOpen = document.body.classList.contains("mobile-nav-active");
+    setMobileNavigation(isOpen);
   };
 
   on(
@@ -98,10 +150,7 @@
 
       const body = select("body");
       if (body.classList.contains("mobile-nav-active")) {
-        body.classList.remove("mobile-nav-active");
-        const toggle = select(".mobile-nav-toggle");
-        toggle.classList.toggle("bi-list");
-        toggle.classList.toggle("bi-x");
+        setMobileNavigation(false, true);
       }
 
       scrollto(this.hash);
@@ -112,11 +161,43 @@
   /* =========================
      Mobile navigation
   ========================= */
-  on("click", ".mobile-nav-toggle", function () {
-    select("body").classList.toggle("mobile-nav-active");
-    this.classList.toggle("bi-list");
-    this.classList.toggle("bi-x");
+  on("click", ".mobile-nav-toggle", () => {
+    const open = !document.body.classList.contains("mobile-nav-active");
+    setMobileNavigation(open, !open);
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (!document.body.classList.contains("mobile-nav-active")) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setMobileNavigation(false, true);
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+    const focusable = [mobileToggle, ...navbarlinks].filter(Boolean);
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last?.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first?.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("mobile-nav-active")) return;
+    if (header?.contains(event.target) || mobileToggle?.contains(event.target))
+      return;
+    setMobileNavigation(false, true);
+  });
+
+  mobileMedia.addEventListener("change", syncMobileNavigation);
+  syncMobileNavigation();
 
   /* =========================
      Back to top
@@ -145,19 +226,23 @@
      Hero typed effect
   ========================= */
   const typed = select(".typed");
-  if (typed && typeof Typed !== "undefined") {
+  if (typed) {
     const strings = typed
       .getAttribute("data-typed-items")
       .split(",")
       .map((s) => s.trim());
 
-    new Typed(".typed", {
-      strings,
-      loop: true,
-      typeSpeed: 90,
-      backSpeed: 45,
-      backDelay: 1800,
-    });
+    if (reduceMotion || typeof Typed === "undefined") {
+      typed.textContent = strings[0];
+    } else {
+      new Typed(".typed", {
+        strings,
+        loop: true,
+        typeSpeed: 55,
+        backSpeed: 70,
+        backDelay: 650,
+      });
+    }
   }
 
   /* =========================
@@ -166,7 +251,8 @@
   window.addEventListener("load", () => {
     if (typeof AOS === "undefined") return;
     AOS.init({
-      duration: 900,
+      disable: reduceMotion,
+      duration: 700,
       easing: "ease-out-cubic",
       once: true,
       mirror: false,

@@ -27,7 +27,8 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
   background: var(--z-bg);
   color: var(--z-text);
   margin: 0;
@@ -51,8 +52,14 @@ a {
   *,
   *::before,
   *::after {
+    scroll-behavior: auto !important;
     transition: none !important;
     animation: none !important;
+  }
+
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
@@ -135,10 +142,24 @@ a {
   position: fixed;
   top: 15px;
   right: 15px;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 28px;
   z-index: 1000;
   cursor: pointer;
   color: var(--z-text);
+  background: rgba(6, 20, 39, 0.92);
+  border: 1px solid var(--z-border);
+  border-radius: 50%;
+  box-shadow: var(--z-shadow-soft);
+}
+
+.mobile-nav-toggle:hover {
+  color: var(--z-accent);
+  border-color: rgba(20, 138, 249, 0.55);
 }
 
 /* Mobile behaviour */
@@ -180,7 +201,8 @@ a {
 ============================================================= */
 #hero {
   height: 100vh;
-  background: url("../img/background_portfolio.jpeg") center / cover no-repeat;
+  min-height: 620px;
+  background: url("../img/background-portfolio.webp") center / cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -211,10 +233,24 @@ a {
   letter-spacing: -0.02em;
 }
 
-#hero p {
+#hero .hero-role {
   margin-top: 16px;
+  margin-bottom: 0;
   font-size: 24px;
   color: var(--z-muted);
+}
+
+#hero .hero-focus {
+  min-height: 1.65em;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: var(--z-muted);
+}
+
+#hero .hero-focus .typed {
+  color: var(--z-accent);
+  font-weight: 700;
 }
 
 #hero .social-links {
@@ -241,6 +277,15 @@ a {
   background: var(--z-accent-soft);
   color: var(--z-accent);
   transform: translateY(-2px);
+}
+
+#hero .social-links a:focus-visible,
+.project-links a:focus-visible,
+.contact a:focus-visible,
+.footer-links a:focus-visible,
+.footer-pill:focus-visible,
+.back-to-top:focus-visible {
+  outline-color: #70baff;
 }
 
 /* =============================================================
@@ -360,6 +405,12 @@ section {
   color: var(--z-muted);
 }
 
+.cv-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 /* Sticky left column */
 @media (min-width: 992px) {
   .resume .resume-left {
@@ -393,6 +444,9 @@ section {
   box-shadow: var(--z-shadow-soft);
   padding: 24px;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
@@ -401,6 +455,36 @@ section {
   transform: translateY(-6px);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
   border-color: rgba(20, 138, 249, 0.28);
+}
+
+.project-visual {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: -24px -24px 22px;
+  overflow: hidden;
+  background: #061427;
+  border-bottom: 1px solid var(--z-border);
+}
+
+.project-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-visual figcaption {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(6, 20, 39, 0.82);
+  color: #eaf2ff;
+  font-size: 11px;
+  line-height: 1.2;
+  backdrop-filter: blur(6px);
 }
 
 .project-head {
@@ -482,6 +566,13 @@ section {
   background: rgba(255, 255, 255, 0.05);
   color: var(--z-text);
   opacity: 0.95;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-top: auto;
 }
 
 .project-links a {
@@ -895,6 +986,50 @@ section {
 }
 
 :focus-visible {
-  outline: 2px solid rgba(20, 138, 249, 0.75);
+  outline: 3px solid #70baff;
   outline-offset: 3px;
+}
+
+@media (max-width: 575px) {
+  #hero {
+    min-height: 560px;
+  }
+
+  #hero h1 {
+    font-size: clamp(38px, 12vw, 50px);
+  }
+
+  #hero .hero-role {
+    font-size: 19px;
+    line-height: 1.45;
+  }
+
+  #hero .hero-focus {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 72px 0;
+  }
+
+  .project-card,
+  .resume .resume-item,
+  .contact .contact-card {
+    padding: 20px;
+  }
+
+  .project-visual {
+    margin: -20px -20px 20px;
+  }
+
+  .contact .contact-links a {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .contact .contact-links a span {
+    width: 100%;
+    margin: 2px 0 0;
+    white-space: normal;
+  }
 }

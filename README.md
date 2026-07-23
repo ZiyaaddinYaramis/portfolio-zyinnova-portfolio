@@ -1,160 +1,106 @@
-# 🧑‍💻 Ziyaaddin Yaramis — Founder Portfolio
+# Ziyaaddin Yaramis — Founder Portfolio
 
-Founder-driven personal portfolio website of **Ziyaaddin Yaramis**,  
-showcasing real-world projects, engineering experience, and product work built under **ZyInnova**.
+The canonical personal portfolio of Ziyaaddin Yaramis, Software Developer and
+Founder of [ZyInnova](https://zyinnova.com/).
 
-🌍 **Live Demo:**  
-👉 https://portfolio.zyinnova.com/
+**Production:** <https://portfolio.zyinnova.com/>
 
----
+## What this repository contains
 
-## 📌 Purpose
+- An accessible, responsive single-page portfolio
+- Verified professional experience and selected project work
+- English and Finnish CV downloads
+- SEO, Open Graph, JSON-LD, sitemap and robots metadata
+- Apache security, compression and cache rules
+- Deterministic CV source and quality-audit scripts
 
-This repository represents a **production-ready personal portfolio**, built to:
+The canonical professional facts live in
+[`docs/PROFESSIONAL-PROFILE-SOURCE.md`](docs/PROFESSIONAL-PROFILE-SOURCE.md).
+Do not introduce a public claim that conflicts with that source.
 
-- Present professional background and hands-on experience
-- Showcase selected founder-built and personal projects
-- Act as a trust layer for ZyInnova studio work
-- Provide a clean, fast, and SEO-friendly personal presence
+## Technology
 
-> ⚠️ This is **not a template demo**.  
-> It is a real, actively used portfolio website.
+- Semantic HTML5
+- Custom CSS and Bootstrap 5 grid/utilities
+- Vanilla JavaScript
+- AOS for progressive scroll animation
+- Typed.js for the optional hero effect
+- Apache `.htaccess` rules for production headers and caching
 
----
+There is no application build step. Bootstrap JavaScript is intentionally not
+loaded because the site does not use Bootstrap interactive components.
 
-## ✨ Key Features
-
-- Founder-focused portfolio structure
-- Clean, minimal dark UI (custom design system)
-- Fully responsive (mobile / tablet / desktop)
-- SEO-ready (Open Graph, Twitter Cards, JSON-LD)
-- Optimized for performance (static & lightweight)
-- Accessible navigation (keyboard support + skip links)
-- CV download support (PDF)
-- Sidebar navigation with active section tracking
-
----
-
-## 🧱 Tech Stack
-
-- **HTML5**
-- **CSS3** (custom design tokens & layout system)
-- **JavaScript (Vanilla)**
-- **Bootstrap 5** (grid & utilities only)
-- **AOS** (scroll animations)
-- **Typed.js** (hero typing effect)
-
-> No frameworks.  
-> No build tools.
->
-> Deliberately kept **simple, stable, and hosting-agnostic**.
-
----
-
-## 📁 Project Structure
-
-````text
-/
-├─ index.html
-├─ robots.txt
-├─ sitemap.xml
-├─ .htaccess
-├─ assets/
-│  ├─ css/
-│  │  └─ style.css
-│  ├─ js/
-│  │  └─ main.js
-│  ├─ img/
-│  │  ├─ og-cover.jpg
-│  │  └─ other images
-│  └─ cv/
-│     └─ MyResume-Ziyaaddin-Yaramis.pdf
-
----
-
-## 🚀 Local Usage
-
-You can open the site directly in a browser:
+## Project structure
 
 ```text
-index.html → double click
-````
-
-Or use a simple local server (recommended):
-
-```bash
-python -m http.server 8000
+/
+├── index.html
+├── .htaccess
+├── robots.txt
+├── sitemap.xml
+├── assets/
+│   ├── css/style.css
+│   ├── js/main.js
+│   ├── cv/
+│   │   ├── Ziyaaddin_Yaramis_CV_EN.pdf
+│   │   └── Ziyaaddin_Yaramis_CV_FI.pdf
+│   └── img/
+├── docs/
+├── output/
+│   ├── docx/
+│   └── pdf/
+└── scripts/
 ```
 
-Then open:
+## Run locally
 
-👉 http://localhost:8000
+From the repository root:
 
----
+```bash
+python3 -m http.server 8765
+```
 
-## 🌐 Deployment
+Open <http://127.0.0.1:8765/>.
 
-This site is deployed as a **static website**.
+Opening `index.html` directly is not recommended because browser security rules
+and absolute production checks behave more reliably through HTTP.
 
-### Production (current)
+## Quality checks
 
-- **Hosting:** Hostinger
-- **Path:** `public_html/portfolio`
-- **Domain:** https://portfolio.zyinnova.com
+```bash
+python3 scripts/audit_stage_d.py
+python3 scripts/audit_stage_e.py
+python3 scripts/audit_stage_fgh.py
+node --check assets/js/main.js
+```
 
-### Deployment Flow
+The CV parity command and document-generation procedure are documented in
+[`docs/CV-UPDATE-PROCEDURE.md`](docs/CV-UPDATE-PROCEDURE.md).
 
-1. Update files locally
-2. Upload all project files to hosting
-3. Replace old files completely
-4. Done — no build step required
+## Deployment
 
----
+Production is a static Hostinger deployment:
 
-## 🔍 SEO & Metadata
+- Domain: <https://portfolio.zyinnova.com/>
+- Target directory: `public_html/portfolio`
+- Build step: none
 
-Included out of the box:
+Follow [`docs/RELEASE-CHECKLIST.md`](docs/RELEASE-CHECKLIST.md). Upload the
+validated public site files only; development sources such as `output/`,
+`scripts/` and internal documentation do not need to be served publicly.
 
-- `robots.txt`
-- `sitemap.xml`
-- Canonical URL
-- Open Graph metadata
-- Twitter Card metadata
-- JSON-LD (**Person schema**)
+## Related profiles
 
-Optimized for:
+- [ZyInnova website](https://zyinnova.com/)
+- [ZyInnova GitHub](https://github.com/zyinnova)
+- [Personal GitHub](https://github.com/ZiyaaddinYaramis)
+- [LinkedIn](https://www.linkedin.com/in/ziyaaddin-y-8768841bb/)
 
-- Google Search
-- LinkedIn preview
-- Twitter / X preview
-- Clean indexing
+## Contact
 
----
+[contact@zyinnova.com](mailto:contact@zyinnova.com)
 
-## 🔗 Related Projects
+## License
 
-- **ZyInnova Studio:** https://zyinnova.com
-- **GameScan Project:** https://zyinnova.com/projects/gamescan
-- **GitHub:** https://github.com/ZiyaaddinYaramis
-- **LinkedIn:**  
-  https://www.linkedin.com/in/ziyaaddin-y-8768841bb/
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
-You are free to study the code,  
-but the **content, name, and branding belong to the author**.
-
----
-
-## 📬 Contact
-
-**Ziyaaddin Yaramis**  
-Founder & Full-Stack Developer — **ZyInnova**
-
-📧 Email: `contact@zyinnova.com`  
-📍 Location: Kerava, Finland  
-🕒 Timezone: Europe / Helsinki
+Source code is available under the [MIT License](LICENSE). Personal content,
+name and branding remain the author's material.

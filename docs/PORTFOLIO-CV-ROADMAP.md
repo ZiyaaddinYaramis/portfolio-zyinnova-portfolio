@@ -333,7 +333,7 @@ teknolojilerle uyumludur.
   arşiv repo için gizlilik kararını uygula ve eski pinleri kaldır.
 - [x] **H-07:** Todo ve Movie Explorer dahil açık repo README'lerini doğrulanmış
   kapsam ve kurumsal iletişim adresiyle düzelt.
-- [ ] **H-08:** Kullanıcı onayından sonra commit/push işlemlerini yap.
+- [x] **H-08:** Kullanıcı onayından sonra commit/push işlemlerini yap.
 - [ ] **H-09:** Kullanıcı onayından sonra Hostinger deployment yap.
 - [ ] **H-10:** Canlı siteyi masaüstü/mobil, link, CV ve HTTP başlıklarıyla
   yeniden doğrula.

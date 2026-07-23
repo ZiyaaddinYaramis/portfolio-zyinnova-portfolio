@@ -64,7 +64,7 @@ LinkedIn URLs remain the approved canonical addresses and are retained.
 
 To be completed immediately after publishing:
 
-- Portfolio source commit: pending
+- Portfolio source commit: `f9debf1`
 - Hostinger deployment: pending
 - Live desktop/mobile verification: pending
 - Live CV download verification: pending

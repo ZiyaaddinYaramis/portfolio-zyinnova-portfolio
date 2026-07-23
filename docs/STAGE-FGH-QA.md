@@ -57,16 +57,33 @@ LinkedIn URLs remain the approved canonical addresses and are retained.
   `0e5d6a3d5d408cc4eddd922676f9f37d0ced8e60`
 - Profile README update commit:
   `d316ce2`
-- Profile fields, pins and old Pages privacy: pending authenticated browser
-  access
+- Profile bio: `Software Developer • Founder of ZyInnova | Flutter, Firebase,
+  web and mobile products.`
+- Profile company: `@zyinnova`
+- Profile pins: Founder Portfolio, Multi-language Todo App and
+  `zyinnova/zyinnova`
+- Old Java training pins: removed
+- Old `ZiyaaddinYaramis.github.io` Pages source: disabled
+- Old repository visibility/state: private and archived
+- Old Pages URL: HTTP 404
 
 ## Production record
 
 To be completed immediately after publishing:
 
-- Portfolio source commit: `f9debf1`
-- Hostinger deployment: pending
-- Live desktop/mobile verification: pending
-- Live CV download verification: pending
-- Live HTTP security/cache headers: pending
-- Rollback backup: pending
+- Portfolio source commit: `f803aab`
+- Hostinger deployment: completed to `public_html/portfolio`
+- Live desktop/mobile verification: passed at 375 px and 1440 px
+- Live project images: four of four loaded when scrolled into view
+- Live browser console: no site-owned errors or warnings
+- English CV: HTTP 200, 97,753 bytes
+- Finnish CV: HTTP 200, 96,832 bytes
+- Open Graph image: HTTP 200, 58,828 bytes
+- Live security headers: CSP, HSTS, nosniff, frame, referrer and permissions
+  policies passed
+- Live cache policy: HTML `no-cache`, CSS 30 days, images one year immutable
+- Old public CV path: HTTP 404
+- Hostinger temporary files and old `assets.9404`: moved to Trash
+- Rollback source: Git commit `3a6bcf3`
+- Local rollback archive SHA-256:
+  `a214dc41340cbd8c4c2c9a972de16c04b50b1b91729a54b2f2a5d7baf0f2b5ba`

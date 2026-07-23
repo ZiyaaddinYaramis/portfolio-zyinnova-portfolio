@@ -317,7 +317,7 @@ teknolojilerle uyumludur.
 - [x] **G-01:** Görsel boyutlarını ve formatlarını optimize et.
 - [x] **G-02:** Kullanılmayan Bootstrap JS ve dış bağımlılıkları denetle.
 - [x] **G-03:** Font ve render maliyetini azalt.
-- [ ] **G-04:** `.htaccess` ve canlı güvenlik/cache başlıklarını eşitle.
+- [x] **G-04:** `.htaccess` ve canlı güvenlik/cache başlıklarını eşitle.
 - [x] **G-05:** HTML, metadata, JSON-LD, robots ve sitemap'i doğrula.
 - [x] **G-06:** Kırık link ve konsol hata taraması yap.
 
@@ -327,15 +327,15 @@ teknolojilerle uyumludur.
 - [x] **H-02:** CV güncelleme ve PDF üretim prosedürünü belgele.
 - [x] **H-03:** Test ve deployment kontrol listesi oluştur.
 - [x] **H-04:** Yerel son kalite kontrolünü tamamla.
-- [ ] **H-05:** GitHub profil başlığı, bio, profil README'si ve seçilmiş
+- [x] **H-05:** GitHub profil başlığı, bio, profil README'si ve seçilmiş
   projeleri kanonik kayıtla eşitle.
-- [ ] **H-06:** Eski GitHub Pages yayınını kapat; açık kişisel veri içeren
+- [x] **H-06:** Eski GitHub Pages yayınını kapat; açık kişisel veri içeren
   arşiv repo için gizlilik kararını uygula ve eski pinleri kaldır.
 - [x] **H-07:** Todo ve Movie Explorer dahil açık repo README'lerini doğrulanmış
   kapsam ve kurumsal iletişim adresiyle düzelt.
 - [x] **H-08:** Kullanıcı onayından sonra commit/push işlemlerini yap.
-- [ ] **H-09:** Kullanıcı onayından sonra Hostinger deployment yap.
-- [ ] **H-10:** Canlı siteyi masaüstü/mobil, link, CV ve HTTP başlıklarıyla
+- [x] **H-09:** Kullanıcı onayından sonra Hostinger deployment yap.
+- [x] **H-10:** Canlı siteyi masaüstü/mobil, link, CV ve HTTP başlıklarıyla
   yeniden doğrula.
 
 ## 8. Her görev için çalışma protokolü
